@@ -70,14 +70,6 @@ public class TubeControl extends Activity {
         mTxtFFTData = (TextView) findViewById(R.id.txtFFTData);
 
 
-        Visualizer mVisualizer = new Visualizer(0);
-        mVisualizer.setEnabled(true);
-        Toast.makeText(getBaseContext(), "Capture size: " + mVisualizer.getCaptureSize(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(getBaseContext(), "Measurement mode: " + mVisualizer.getMeasurementMode(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(getBaseContext(), "Sampling rate: " + mVisualizer.getSamplingRate(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(getBaseContext(), "Scaling mode: " + mVisualizer.getScalingMode(), Toast.LENGTH_SHORT).show();
-
-
         if(mBluetoothSocket != null) {
             if(mBluetoothAdapter.isEnabled()) {
                 setMACaddress();
